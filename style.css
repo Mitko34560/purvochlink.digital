@@ -1,14 +1,15 @@
-/* Основни променливи за цветовете */
+/* Професионални цветове за официален сайт */
 :root {
-    --primary-color: #5A189A;   /* Тъмно лилаво */
-    --accent-color: #FFC300;    /* Ярко жълто */
-    --background-color: #F3E8FF;/* Светъл фон */
-    --text-color: #333333;
+    --primary-color: #1E3A8A; /* Тъмно синьо - заглавия, фон на хедъра */
+    --secondary-color: #3B82F6; /* Светло синьо - акценти */
+    --background-color: #F9FAFB; /* Светъл фон */
+    --text-color: #1F2937;
+    --border-color: #E5E7EB;
 }
 
 /* Общо оформяне */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
@@ -17,104 +18,124 @@ body {
 }
 
 .container {
-    width: 85%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 1400px;
     margin: auto;
-    overflow: hidden;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
-/* Хедър и Навигация */
+/* Хедър (заглавна част) */
 header {
     background: var(--primary-color);
     color: white;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2.2em;
 }
 
 header p {
-    font-weight: 300;
+    margin: 5px 0 0;
 }
 
+/* Навигация (сложно меню, пресъздадено в опростен вид) */
 nav {
-    background: var(--primary-color);
-    border-top: 3px solid var(--accent-color);
-    padding: 10px 0;
+    background: white;
+    border-bottom: 2px solid var(--border-color);
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: flex; /* Подреждане на елементите в ред */
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 nav ul li a {
-    color: white;
+    display: block;
+    color: var(--primary-color);
+    padding: 15px 20px;
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 10px;
-    transition: color 0.3s, border-bottom 0.3s;
+    transition: background-color 0.3s;
 }
 
-nav ul li a:hover, nav ul li a.current {
-    color: var(--accent-color);
-    border-bottom: 2px solid var(--accent-color);
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: white;
 }
 
-/* Основно съдържание */
+/* Основно съдържание (Двуколонна подредба) */
+.main-wrapper {
+    display: flex;
+    padding: 30px 0;
+    gap: 30px; /* Разстояние между двете колони */
+}
+
 .main-content {
-    padding: 40px 0;
-    min-height: 60vh;
+    flex: 3; /* Заема по-голямата част (напр. 70%) */
+}
+
+.sidebar {
+    flex: 1; /* Заема по-малката част (напр. 30%) */
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .section-title {
     color: var(--primary-color);
-    border-bottom: 3px solid var(--accent-color);
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-}
-
-/* Елементи за новини/картички */
-.article-card {
-    background: white;
-    padding: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
     margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid var(--accent-color);
 }
 
-.article-card h4 {
-    color: var(--primary-color);
+/* Новинарски картички */
+.news-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.news-card h4 {
     margin-top: 0;
+    color: var(--text-color);
 }
 
-/* Бутони/Връзки */
-a.button {
-    display: inline-block;
-    background: var(--accent-color);
-    color: var(--primary-color);
-    padding: 10px 20px;
-    text-decoration: none;
+.news-card small {
+    display: block;
+    color: #6B7280;
+    margin-top: 5px;
+}
+
+/* Елементи в страничната лента */
+.sidebar-box {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #EBF8FF; /* Светлосин фон за кутиите */
+    border: 1px solid var(--secondary-color);
     border-radius: 5px;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: background 0.3s;
+    text-align: center;
 }
 
-a.button:hover {
-    background: #FFD750; /* По-светло жълто */
+.sidebar-box a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar-box a:hover {
+    text-decoration: underline;
 }
 
 /* Футър */
@@ -123,6 +144,5 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 30px;
-    border-top: 3px solid var(--accent-color);
+    margin-top: 20px;
 }
