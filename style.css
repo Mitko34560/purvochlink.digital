@@ -1,0 +1,128 @@
+/* Основни променливи за цветовете */
+:root {
+    --primary-color: #5A189A;   /* Тъмно лилаво */
+    --accent-color: #FFC300;    /* Ярко жълто */
+    --background-color: #F3E8FF;/* Светъл фон */
+    --text-color: #333333;
+}
+
+/* Общо оформяне */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Хедър и Навигация */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-weight: 300;
+}
+
+nav {
+    background: var(--primary-color);
+    border-top: 3px solid var(--accent-color);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.current {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* Основно съдържание */
+.main-content {
+    padding: 40px 0;
+    min-height: 60vh;
+}
+
+.section-title {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Елементи за новини/картички */
+.article-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--accent-color);
+}
+
+.article-card h4 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+/* Бутони/Връзки */
+a.button {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+a.button:hover {
+    background: #FFD750; /* По-светло жълто */
+}
+
+/* Футър */
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 3px solid var(--accent-color);
+}
