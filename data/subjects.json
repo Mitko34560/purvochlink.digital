@@ -1,8 +1,0 @@
-{
-  "subjects": [
-    { "id": 1, "name": "Mathematics", "teacher_id": 2, "class_id": 1 },
-    { "id": 2, "name": "Bulgarian", "teacher_id": 2, "class_id": 1 },
-    { "id": 3, "name": "English", "teacher_id": 2, "class_id": 1 },
-    { "id": 4, "name": "Physics", "teacher_id": 2, "class_id": 1 }
-  ]
-}

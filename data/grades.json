@@ -1,7 +1,0 @@
-{
-  "grades": [
-    { "id": 1, "student_id": 3, "subject_id": 1, "grade": 5, "type": "written exam", "date": "2026-01-15", "comment": "Good work" },
-    { "id": 2, "student_id": 5, "subject_id": 1, "grade": 6, "type": "oral exam", "date": "2026-01-14", "comment": "Excellent" },
-    { "id": 3, "student_id": 6, "subject_id": 2, "grade": 4, "type": "test", "date": "2026-01-10", "comment": "Needs improvement" }
-  ]
-}

@@ -1,6 +1,0 @@
-{
-  "absences": [
-    { "id": 1, "student_id": 3, "date": "2026-01-15", "type": "absent", "reason": "", "excuse": false },
-    { "id": 2, "student_id": 5, "date": "2026-01-14", "type": "late", "reason": "", "excuse": false }
-  ]
-}

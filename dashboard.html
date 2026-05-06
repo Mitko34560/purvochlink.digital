@@ -6,41 +6,57 @@
     <title>Dashboard - EduPanel</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="app-layout">
-        <aside class="sidebar">
+<body class="dashboard-page">
+    <div class="app-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <h1>📚 EduPanel</h1>
+                <div class="sidebar-logo">📚</div>
+                <h2>EduPanel</h2>
+                <button class="close-sidebar" onclick="toggleSidebar()">✕</button>
             </div>
+
             <nav class="sidebar-nav" id="sidebarNav"></nav>
+
             <div class="sidebar-footer">
-                <button onclick="logout()" class="logout-btn">Logout</button>
+                <div class="user-card">
+                    <div class="user-avatar" id="userAvatar">👤</div>
+                    <div class="user-info">
+                        <div class="user-name" id="userName"></div>
+                        <div class="user-role" id="userRole"></div>
+                    </div>
+                </div>
+                <button onclick="logout()" class="btn btn-logout">🚪 Logout</button>
             </div>
         </aside>
 
+        <!-- Main Area -->
         <main class="main-content">
+            <!-- Top Bar -->
             <header class="top-bar">
-                <div class="search-bar">
+                <button class="hamburger" onclick="toggleSidebar()">☰</button>
+                <div class="search-box">
                     <input type="text" placeholder="Search...">
+                    <span>🔍</span>
                 </div>
-                <div class="user-menu">
-                    <span id="userName"></span>
-                    <button onclick="toggleMenu()" class="menu-toggle">⋮</button>
-                    <div class="dropdown-menu hidden">
-                        <a href="#">Profile</a>
-                        <a href="#">Settings</a>
-                        <a onclick="logout()">Logout</a>
-                    </div>
+                <div class="top-icons">
+                    <button class="icon-btn">🔔</button>
+                    <button class="icon-btn" onclick="toggleSettings()">⚙️</button>
                 </div>
             </header>
 
-            <div class="content-area" id="contentArea">
+            <!-- Content Area -->
+            <div class="content" id="content">
                 <!-- Dynamic content loads here -->
             </div>
         </main>
     </div>
 
-    <script src="js/database.js"></script>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/db.js"></script>
+    <script src="js/auth.js"></script>
     <script src="js/dashboard.js"></script>
 </body>
 </html>
