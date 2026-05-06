@@ -1,0 +1,6 @@
+{
+  "praises": [
+    { "id": 1, "student_id": 5, "praise": "Excellent participation in class", "date": "2026-01-15", "teacher_id": 2 },
+    { "id": 2, "student_id": 3, "praise": "Good homework", "date": "2026-01-14", "teacher_id": 2 }
+  ]
+}

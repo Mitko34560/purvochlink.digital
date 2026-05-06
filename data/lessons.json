@@ -1,0 +1,5 @@
+{
+  "lessons": [
+    { "id": 1, "class_id": 1, "subject_id": 1, "date": "2026-01-15", "hour": 1, "topic": "Algebra basics", "attendance": {}, "completed": true }
+  ]
+}
