@@ -1,64 +1,376 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduPanel - Professional School Diary System</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="landing-page">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="brand">
-                    <span class="brand-icon">📚</span>
-                    <span class="brand-text">EduPanel</span>
-                </div>
-                <a href="login.html" class="btn btn-primary">Login</a>
-            </div>
-        </nav>
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Училищен портал | СУ „Първочислиник“</title>
+    <meta
+      name="description"
+      content="Пълноценен училищен сайт с новини, прием, графици, документи, ресурси и контакти."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Към съдържанието</a>
 
-        <section class="hero">
-            <div class="hero-left">
-                <h1>Welcome to <span class="gradient">EduPanel</span></h1>
-                <p class="subtitle">The Modern School Management System</p>
-                <p class="description">Manage students, grades, attendance, and progress all in one professional platform</p>
-                <a href="login.html" class="btn btn-primary btn-large">Get Started Now</a>
-            </div>
-            <div class="hero-right">
-                <div class="blob"></div>
-            </div>
-        </section>
+    <header class="site-header">
+      <div class="topbar">
+        <div class="topbar__inner">
+          <span>гр. Пловдив, ул. „Съединение“ 9</span>
+          <div class="topbar__links">
+            <a class="diary-link" href="https://www.shkolo.bg/" target="_blank" rel="noreferrer">
+              Електронен дневник
+            </a>
+          </div>
+        </div>
+      </div>
 
-        <section class="features">
-            <h2>Powerful Features</h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="icon">📊</div>
-                    <h3>Real-time Dashboard</h3>
-                    <p>Monitor all school activities with beautiful statistics</p>
-                </div>
-                <div class="feature">
-                    <div class="icon">📝</div>
-                    <h3>My Lesson Tool</h3>
-                    <p>Record grades, attendance, and remarks instantly</p>
-                </div>
-                <div class="feature">
-                    <div class="icon">👥</div>
-                    <h3>Multi-Role System</h3>
-                    <p>Support for Directors, Teachers, Students, and Parents</p>
-                </div>
-                <div class="feature">
-                    <div class="icon">📱</div>
-                    <h3>Fully Responsive</h3>
-                    <p>Works perfectly on all devices</p>
-                </div>
-            </div>
-        </section>
+      <nav class="nav" aria-label="Основна навигация">
+        <a class="brand" href="#home" aria-label="Начало">
+          <span class="brand__mark">П</span>
+          <span>
+            <strong>СУ „Първочислиник“</strong>
+            <small>математика, технологии и човешко отношение</small>
+          </span>
+        </a>
 
-        <footer class="footer">
-            <p>&copy; 2026 EduPanel. All rights reserved.</p>
-        </footer>
-    </div>
-</body>
+        <button class="nav__toggle icon-button" type="button" aria-expanded="false" aria-controls="navMenu">
+          <span class="sr-only">Меню</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+
+        <div class="nav__menu" id="navMenu">
+          <a href="#about">За нас</a>
+          <a href="#admission">Прием</a>
+          <a href="#students">За ученика</a>
+          <a href="#news">Новини</a>
+          <a href="#schedule">Графици</a>
+          <a href="#projects">Проекти</a>
+          <a href="#contacts">Контакти</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-label="Начало">
+        <img src="assets/school-hero.png" alt="Светла училищна среда с класна стая и двор" />
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+          <p class="eyebrow">училищен портал</p>
+          <h1>СУ „Първочислиник“</h1>
+          <p>
+            Училище за любопитни умове: ясна информация за приема, учебния ден,
+            новините, документите и важните събития през годината.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#admission">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+              Прием 2026/2027
+            </a>
+            <a class="button button--light" href="#students">За ученици и родители</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-links" aria-label="Бързи връзки">
+        <a href="#documents">
+          <span class="quick-links__icon">Д</span>
+          <strong>Документи</strong>
+          <small>заявления, правилници, бланки</small>
+        </a>
+        <a href="#food">
+          <span class="quick-links__icon">Х</span>
+          <strong>Хранене</strong>
+          <small>седмично меню и заявки</small>
+        </a>
+        <a href="#schedule">
+          <span class="quick-links__icon">Г</span>
+          <strong>Графици</strong>
+          <small>часове, консултации, изпити</small>
+        </a>
+        <a href="#calendar">
+          <span class="quick-links__icon">К</span>
+          <strong>Календар</strong>
+          <small>събития и неучебни дни</small>
+        </a>
+      </section>
+
+      <section class="section section--feature" id="about">
+        <div>
+          <p class="eyebrow">за нас</p>
+          <h2>Училище, което държи на знанията и човешкото отношение</h2>
+          <p>
+            Подготвяме учениците да мислят критично, да работят в екип и да
+            намират уверено своя път. В програмата ни има силна общообразователна
+            подготовка, STEM занимания, изкуства, спорт и клубове по интереси.
+          </p>
+          <div class="about-actions" aria-label="Акценти">
+            <span>STEM среда</span>
+            <span>профилирани паралелки</span>
+            <span>клубове и проекти</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="news">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">новини</p>
+            <h2>Актуално</h2>
+          </div>
+          <label class="search">
+            <span class="sr-only">Търсене в новините</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m21 21-4.3-4.3M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" />
+            </svg>
+            <input id="newsSearch" type="search" placeholder="Търсене..." />
+          </label>
+        </div>
+
+        <div class="filters" role="group" aria-label="Филтър за новини">
+          <button class="chip is-active" type="button" data-filter="all">Всички</button>
+          <button class="chip" type="button" data-filter="admission">Прием</button>
+          <button class="chip" type="button" data-filter="events">Събития</button>
+          <button class="chip" type="button" data-filter="students">Ученици</button>
+        </div>
+
+        <div class="news-grid" id="newsGrid">
+          <article class="news-card" data-category="admission">
+            <span class="tag">Прием</span>
+            <time datetime="2026-06-08">8 юни 2026</time>
+            <h3>Записване на класираните ученици за първи клас</h3>
+            <p>Публикувани са сроковете, нужните документи и графикът за срещи с родителите.</p>
+          </article>
+          <article class="news-card" data-category="events">
+            <span class="tag tag--green">Събития</span>
+            <time datetime="2026-06-03">3 юни 2026</time>
+            <h3>Празник на професиите събра ученици и партньори</h3>
+            <p>Гости от бизнеса показаха как знанията от класната стая оживяват в реални професии.</p>
+          </article>
+          <article class="news-card" data-category="students">
+            <span class="tag tag--yellow">Ученици</span>
+            <time datetime="2026-05-24">24 май 2026</time>
+            <h3>Отличия от областни олимпиади</h3>
+            <p>Наши ученици спечелиха призови места по география, математика и информационни технологии.</p>
+          </article>
+          <article class="news-card" data-category="events">
+            <span class="tag tag--green">Събития</span>
+            <time datetime="2026-04-22">22 април 2026</time>
+            <h3>Ден на Земята в училищния двор</h3>
+            <p>Класовете засадиха цветни лехи и подготвиха изложба за устойчиви навици.</p>
+          </article>
+        </div>
+        <p class="empty-state" id="newsEmpty" hidden>Няма новини по избраните критерии.</p>
+      </section>
+
+      <section class="section admission" id="admission">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">прием</p>
+            <h2>Кандидатстване и записване</h2>
+          </div>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Класове за прием">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="grade1">I клас</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="grade5">V клас</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="grade8">VIII клас</button>
+        </div>
+        <div class="tab-panel is-active" id="grade1" role="tabpanel">
+          <h3>Прием в I клас</h3>
+          <p>Подаване на заявления, класиране, записване и среща с бъдещите класни ръководители.</p>
+          <ol>
+            <li>Заявление от родител/настойник</li>
+            <li>Акт за раждане за справка</li>
+            <li>Документ за адресна регистрация</li>
+          </ol>
+        </div>
+        <div class="tab-panel" id="grade5" role="tabpanel" hidden>
+          <h3>Прием в V клас</h3>
+          <p>Свободни места в паралелки с разширено изучаване на математика, английски език и изкуства.</p>
+          <ol>
+            <li>Служебна бележка за завършен IV клас</li>
+            <li>Заявление по образец</li>
+            <li>Индивидуална среща при нужда</li>
+          </ol>
+        </div>
+        <div class="tab-panel" id="grade8" role="tabpanel" hidden>
+          <h3>Прием в VIII клас</h3>
+          <p>Профили: „Графичен дизайн“, „Мениджмънт и икономика“, „Софтуерни технологии“.</p>
+          <ol>
+            <li>Кандидатстване през електронната система</li>
+            <li>Медицинско свидетелство за професионални паралелки</li>
+            <li>Записване след класиране</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section tools" id="students">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">за ученика</p>
+            <h2>Полезни материали</h2>
+          </div>
+        </div>
+        <div class="tool-grid">
+          <article id="documents">
+            <h3>Училищна документация</h3>
+            <p>Правилник, заявления, декларации, графици за изпити и процедури.</p>
+            <a href="#contacts">Попитай секретариата</a>
+          </article>
+          <article id="food">
+            <h3>Хранене</h3>
+            <p>Седмично меню, условия за столово хранене и подаване на заявки.</p>
+            <a href="#calendar">Виж седмицата</a>
+          </article>
+          <article>
+            <h3>Библиотека</h3>
+            <p>Препоръчителни списъци, читателски карти и инициативи за четене.</p>
+            <a href="#projects">Клубове</a>
+          </article>
+          <article>
+            <h3>Подкрепа</h3>
+            <p>Психолог, ресурсен учител, консултации и подкрепяща среда.</p>
+            <a href="#faq">ЧЗВ</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section schedule" id="schedule">
+        <div>
+          <p class="eyebrow">графици</p>
+          <h2>Учебно време и консултации</h2>
+        </div>
+        <div class="schedule-grid">
+          <div>
+            <h3>Първа смяна</h3>
+            <p>08:00 - 13:15</p>
+          </div>
+          <div>
+            <h3>Втора смяна</h3>
+            <p>13:30 - 18:45</p>
+          </div>
+          <div>
+            <h3>Консултации</h3>
+            <p>по график всяка сряда и петък</p>
+          </div>
+          <div>
+            <h3>Приемно време</h3>
+            <p>директор: вторник, 15:00 - 17:00</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects" id="projects">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">проекти</p>
+            <h2>Училищни програми</h2>
+          </div>
+        </div>
+        <div class="project-list">
+          <article>
+            <span>STEM</span>
+            <h3>Училищна STEM среда</h3>
+            <p>Лаборатории, роботика, дигитални експерименти и практическо обучение.</p>
+          </article>
+          <article>
+            <span>Еразъм+</span>
+            <h3>Дигитална класна стая</h3>
+            <p>Международно партньорство за онлайн колаборация и модерни учебни подходи.</p>
+          </article>
+          <article>
+            <span>Клубове</span>
+            <h3>Заедно можем всичко</h3>
+            <p>Занимания по интереси, доброволчество, спорт и гражданска активност.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gallery" aria-label="Галерия">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">галерия</p>
+            <h2>Животът в училище</h2>
+          </div>
+        </div>
+        <div class="gallery-grid">
+          <figure><img src="assets/school-hero.png" alt="Класна стая и училищен двор" /><figcaption>Светла учебна среда</figcaption></figure>
+          <figure><div class="photo-tile photo-tile--science"></div><figcaption>STEM занимания</figcaption></figure>
+          <figure><div class="photo-tile photo-tile--art"></div><figcaption>Творчески проекти</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="section calendar-faq" id="calendar">
+        <div>
+          <p class="eyebrow">календар</p>
+          <h2>Предстоящи събития</h2>
+          <div class="calendar">
+            <p><strong>12 юни</strong> Ден на отворените врати</p>
+            <p><strong>18 юни</strong> Изложба „Моят проект“</p>
+            <p><strong>24 юни</strong> Тържествено връчване на свидетелства</p>
+          </div>
+        </div>
+        <div id="faq">
+          <p class="eyebrow">въпроси</p>
+          <h2>Често задавани</h2>
+          <details open>
+            <summary>Кога започва първият учебен час?</summary>
+            <p>Първият час започва в 08:00 ч. Вратите са отворени от 07:30 ч.</p>
+          </details>
+          <details>
+            <summary>Как се подават заявления за прием?</summary>
+            <p>На място в секретариата или онлайн чрез публикуваните формуляри.</p>
+          </details>
+          <details>
+            <summary>Къде се виждат оценките и отсъствията?</summary>
+            <p>В електронния дневник и чрез класния ръководител.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section contact" id="contacts">
+        <div>
+          <p class="eyebrow">контакти</p>
+          <h2>Свържете се с нас</h2>
+          <address>
+            гр. Пловдив, ул. „Съединение“ 9
+          </address>
+          <div class="map-placeholder" aria-label="Карта">
+            <span>Пловдив</span>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <label>
+            Име
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Съобщение
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="button button--primary" type="submit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z" /></svg>
+            Изпрати
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>СУ „Първочислиник“</strong>
+        <p>© <span id="year"></span> Всички права запазени.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#news">Новини</a>
+        <a href="#admission">Прием</a>
+        <a href="#contacts">Контакти</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
